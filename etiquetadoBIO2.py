@@ -80,13 +80,3 @@ def etiquetado(name, cas, layer):
 
    # return Samples, ListAnotaciones, tokens
     return data_hc, longitud, ListAnotaciones
-
-import pickle 
-
-ruta_archivo = "C:\\Users\\Acer\\Documents\\Material importante\\Proyecto NLP\\Etiquetado\\Curacion BIO"
-
-with open("data_hc.pickle", 'wb') as archivo:
-    pickle.dump(data_hc, archivo)
-
-with open("data_hc.pickle", 'rb') as archivo:
-    mi_variable = pickle.load(archivo)

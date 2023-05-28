@@ -4,7 +4,8 @@ Created on Fri Apr  8 19:29:15 2022
 
 @author: Dylan Montoya 
 """
-import os 
+import os
+import pickle 
 from cassis import *
 from etiquetadoBIO2 import etiquetado
 import numpy as np
@@ -29,3 +30,10 @@ sen_mean = np.mean(longitud)
 sen_max = np.amax(longitud)                        
 sen_precentile = np.percentile(longitud,99)        
 print(sen_std, sen_mean, sen_max, sen_precentile)
+
+
+with open("data_hc.pickle", 'wb') as archivo:
+    pickle.dump(data_hc, archivo)
+
+with open("data_hc.pickle", 'rb') as archivo:
+    mi_variable = pickle.load(archivo)
