@@ -1,3 +1,4 @@
 *.xmi
 curation/*
 TypeSystem.xml
+*.pickle
