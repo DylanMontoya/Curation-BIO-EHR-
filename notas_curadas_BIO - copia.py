@@ -2,7 +2,8 @@ import os
 from zipfile import ZipFile
 import shutil
 
-docs = os.walk("C:/Users/Acer/Desktop/Curacion BIO/curation", topdown=False)
+docs = os.walk("C:/Users/Acer/Documents/Material importante/Proyecto NLP/Etiquetado/Curacion BIO", topdown=False)
+
 
 arc_zip = []
 name = []
@@ -42,7 +43,7 @@ for root, dirs, files in docs:
 
 #%% MELO
 for i in range(len(dirs)):
-    contenido = os.chdir("C:/Users/Acer/Desktop/Curacion BIO/curation/{}".format(dirs[i]))
+    contenido = os.chdir("C:/Users/Acer/Documents/Material importante/Proyecto NLP/Etiquetado/Curacion BIO/curation/{}".format(dirs[i]))
     with ZipFile(arc_zip[i], 'r') as zip:
         zip.extractall()
         
@@ -50,16 +51,16 @@ for i in range(len(dirs)):
     #     for fichero in ficheros:
     #         print(fichero.name)
     
-    now_name = os.path.join("C:/Users/Acer/Desktop/Curacion BIO/curation/{}".format(dirs[i]), 
+    now_name = os.path.join("C:/Users/Acer/Documents/Material importante/Proyecto NLP/Etiquetado/Curacion BIO/curation/{}".format(dirs[i]), 
                             "CURATION_USER.xmi")
-    new_name = os.path.join("C:/Users/Acer/Desktop/Curacion BIO/curation/{}".format(dirs[i]), 
+    new_name = os.path.join("C:/Users/Acer/Documents/Material importante/Proyecto NLP/Etiquetado/Curacion BIO/curation/{}".format(dirs[i]), 
                             "{}.xmi".format(dirs[i]))
     
     shutil.move(now_name, new_name)
     
     
     source = '{}.xmi'.format(dirs[i])
-    destination = "C:/Users/Acer/Desktop/Curacion BIO"
+    destination = "C:/Users/Acer/Documents/Material importante/Proyecto NLP/Etiquetado/Curacion BIO/curation"
 
     shutil.move(source,destination)
     

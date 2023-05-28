@@ -2,10 +2,10 @@
 """
 Created on Fri May 20 11:27:45 2022
 
-@author: User
+@author: Dylan Montoya
 """
 
-##Sentenceias 
+##Sentencias 
 
 from cassis import *
 import numpy as np
@@ -77,10 +77,16 @@ def etiquetado(name, cas, layer):
            #hice transpuesta porque creo que así es mas fácil de analizar los datos
         
         Samples[name]=arreglo #Diccionario con key: nombre del documento Value: tokens y su etiquetado
-       
-
 
    # return Samples, ListAnotaciones, tokens
     return data_hc, longitud, ListAnotaciones
 
-   
+import pickle 
+
+ruta_archivo = "C:\\Users\\Acer\\Documents\\Material importante\\Proyecto NLP\\Etiquetado\\Curacion BIO"
+
+with open("data_hc.pickle", 'wb') as archivo:
+    pickle.dump(data_hc, archivo)
+
+with open("data_hc.pickle", 'rb') as archivo:
+    mi_variable = pickle.load(archivo)

@@ -2,7 +2,19 @@ import os
 from zipfile import ZipFile
 import shutil
 
-docs = os.walk("C:/Users/Acer/Desktop/Curacion BIO/curation", topdown=False)
+docs = os.walk("C:/Users/Acer/Documents/Material importante/Proyecto NLP/Etiquetado/Curacion BIO", 
+               topdown=False)
+
+for directorio_actual, subdirectorios, archivos in docs:
+    # directorio_actual es una cadena que representa la ruta del directorio actual
+    print("Directorio actual:", directorio_actual)
+
+    # subdirectorios es una lista de cadenas que contiene los nombres de los subdirectorios en el directorio actual
+    print("\n Subdirectorios:", subdirectorios)
+
+    # archivos es una lista de cadenas que contiene los nombres de los archivos en el directorio actual
+    print("\n Archivos:", archivos)
+
 
 arc_zip = []
 name = []
