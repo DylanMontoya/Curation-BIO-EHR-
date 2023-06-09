@@ -2,7 +2,7 @@
 """
 Created on Fri Apr  8 19:29:15 2022
 
-@author: 
+@author: Dylan Montoya
 """
 import os 
 from cassis import *
@@ -18,13 +18,4 @@ for file in os.listdir():  # se usa para obtener la lista de todos los archivos 
            cas= load_cas_from_xmi(f, typesystem=typesystem)
            
            #Hc=etiquetado(name,cas,'webanno.custom.Anonimizacin')
-           Hc,Di,oA, arrlego, spa = etiquetado(name,cas,'webanno.custom.NERClnico')
-           
-# key_list = list(Hc.keys())
-# lista = []
-# for i in range(0,100):
-#     lista.append(Hc.values())
-#     # lista = Hc["{}".format(key_list[i])]
-    
-# res = sum(Hc.values(), []) 
-    
+           Hc,Di,oA, arrlego, spa = etiquetado(name,cas,'webanno.custom.NERClnico') 
