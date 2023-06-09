@@ -2,7 +2,7 @@
 """
 Created on Sat Apr  2 14:48:43 2022
 
-@author: Dul
+@author: Dylan Montoya
 """
 
 from cassis import *
